@@ -230,6 +230,10 @@ footer p{
         margin: 15px 15px 0px 15px;
     }
 
+    .sidebar{
+        display: none;
+    }
+
     #nav h1{
         display: block;
         z-index: 3;
