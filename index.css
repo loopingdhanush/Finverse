@@ -22,6 +22,7 @@ body,html{
 }
 .sidebar{
     display: none;
+    user-select:none;
 }
 
 .navbar{
@@ -34,7 +35,7 @@ body,html{
 
     padding: 0px 35px 0px 35px;
     border-radius: 7px;
-
+    user-select:none;
     background-color: rgb(255,255,255,0.1);
     backdrop-filter: blur(10px) ;
     box-shadow: 0px 0px 10px 2px rgb(0,0,0,0.2);   
