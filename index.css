@@ -5,28 +5,7 @@
     margin: 0;
     font-family: "Poppins", serif;
 }
-body,html{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
 
-#slide1{
-    background-image: linear-gradient(to right top,black ,green 90%);
-    padding: 10px;
-    min-height:80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom:50px ;
-}
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: "Poppins", serif;
-}
 body,html{
     padding: 0;
     margin: 0;
@@ -42,7 +21,7 @@ body,html{
     align-items: center;
 }
 
-nav{
+.navbar{
     margin: 0;
     max-width: 1000px;
     height: 50px;
@@ -63,14 +42,56 @@ nav{
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+#click{
+    display: none;
+}
+
+.sidebar a{
+    margin: 0px 5px 0px 5px;
+    color:lightgreen;
+    font-weight:600;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+.sidebar ul li img{
+    height: 35px;
+}
+
+.sidebar ul li{
+    list-style: none;
+    padding: 20px;
+    
+}
+
+.sidetop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.sidebar{
+    
+    border-radius: 7px;
+    z-index: 2;
+    background-color: rgb(255,255,255,0.1);
+    backdrop-filter: blur(10px) ;
+    box-shadow: 0px 0px 10px 2px rgb(0,0,0,0.2);   
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width:300px;
+    display: flex;
+    flex-direction: column;
+}
+
 nav img{
     height:35px;
 }
 
-nav h1{
-    
+#click{
     cursor: pointer;
-    display: none;
 }
 
 #navi a{
@@ -203,41 +224,23 @@ footer p{
 }
 
 @media (max-width:600px){
-    nav {
-        margin: 0;
-        border-radius: 0;
+    .navbar{
+        border-radius: 7;
         top: 0;
-        padding: 0px 15px 0px 15px;
+        margin: 15px 15px 0px 15px;
     }
 
-    nav h1{
+    #nav h1{
         display: block;
         z-index: 3;
     }
 
-    #navi h1{
-        font-size: xx-large;
-    }
-
     #navi{
         display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin: 0;
-        height: 100vh;
-        width:auto;
-        z-index: 2;
-        background-color: aliceblue;
-        
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: xxx-large;
     }
-    #navi a{
-        color: black;
+    
+    #click{
+        display: block;
     }
 
     #slide1{
@@ -282,249 +285,3 @@ footer p{
 
     
 }
-
-
-nav{
-    margin: 0;
-    max-width: 1000px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0px 35px 0px 35px;
-    border-radius: 7px;
-
-    background-color: rgb(255,255,255,0.1);
-    backdrop-filter: blur(10px) ;
-    box-shadow: 0px 0px 10px 2px rgb(0,0,0,0.2);   
-    position: sticky;
-    top: 10px;
-    z-index: 1;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-nav img{
-    height:35px;
-}
-
-nav h1{
-    
-    cursor: pointer;
-    display: none;
-}
-
-#navi a{
-    margin: 0px 5px 0px 5px;
-    color:lightgreen;
-    font-weight:600;
-    text-decoration: none;
-}
-
-#intro{
-    padding:10px;
-    margin-top: 10%;
-    font-size: 40px;
-    text-align: center;
-    color: lightgreen;
-    user-select: none;
-}
-
-#intro h1{
-    font-weight:normal;
-    
-}
-
-#intro h3{
-    font-weight:normal;
-    
-}
-
-.bold{
-    color: rgba(208,131,0,255);
-    text-shadow: 0px 0px 7px rgb(90, 60, 7);
-    font-weight:bold;
-}
-
-.words{
-font-size:x-large;
-display: flex;
-flex-direction: column;
-
-height: 40px;
-overflow: hidden;
-margin-bottom: 10%;
-}
-
-.words span{
-    display: block;
-    padding: 5px;
-    animation: spin_words 8s infinite;
-}
-
-.about1 {
-    background-color: rgb(163, 228, 163);
-    border-radius: 20px;
-    margin: 20px;
-    max-width: 1000px;
-    text-align: center;
-    transition: 0.5s;
-    user-select: none;
-    
-}
-
-.about1 strong,.about1 h1 {
-    transition: color 0.5s ease-in-out;
-}
-
-.about1:hover {
-    transform: scale(1.05);
-}
-
-.about1:hover strong{
-    color: rgb(208,131,0);
-}
-
-.about1:hover h1 {
-    color: green;
-}
-
-.about1 h1{
-    font-size: x-large;
-    padding-top:15px;
-}
-
-.about1 p{
-    padding:15px;
-    padding-bottom: 20px;
-    font-size: large;
-}
-
-
-
-footer{
-    display: flex;
-    height: 40px;
-    background-color: black;
-    align-items:center;
-    justify-content: center;
-    padding:0 20px 0 20px;
-}
-
-footer p{
-    
-    color: white;
-}
-
-
-
-@keyframes spin_words{
-
-    10%{
-        transform: translateY(-112%);
-    }
-    25%{
-        transform: translateY(-100%);
-    }
-    30%{
-        transform: translateY(-212%);
-    }
-    50%{
-        transform: translateY(-200%);
-    }
-    60%{
-        transform: translateY(-312%);
-    }
-    75%{
-        transform: translateY(-300%);
-    }
-    85%{
-        transform: translateY(-412%);
-    }
-    100%{
-        transform: translateY(-400%);
-}
-}
-
-@media (max-width:600px){
-    nav {
-        margin: 0px 10px;
-        padding: 0px 15px 0px 15px;
-    }
-
-    nav h1{
-        display: block;
-        z-index: 3;
-    }
-
-    #navi h1{
-        font-size: xx-large;
-    }
-
-    #navi{
-        border-radius: 10px;
-        display: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin-bottom: 10px;
-        height: 100vh;
-        width:auto;
-        z-index: 2;
-        background-color: aliceblue;
-        
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: xxx-large;
-    }
-    
-    #navi a{
-        color: black;
-    }
-
-    #slide1{
-        padding: 0px;
-        margin: 0px;
-    }
-
-    #intro h1{
-        font-size: 40px;
-        font-weight:normal;
-        
-    }
-
-    #intro h3,.words{
-        font-size: 18px;
-        font-weight:normal;
-        
-    }
-
-    .about1 h1{
-        font-size: x-large;
-        padding-top: 12px;
-    }
-    
-    .about1 p{
-        padding: 12px;
-        padding-bottom: 15px;
-        font-size: medium;
-    }
-
-    .about1{
-        height: fit-content;
-        margin: 30px;
-
-    }
-    
-    footer{
-        
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    
-}
-
