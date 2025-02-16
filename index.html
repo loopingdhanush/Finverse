@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -11,12 +13,13 @@
         <div>
             <div class="sidebar">
                 <ul>
-                <li><div class="sidetop"><h1 id="click" onclick="sidebar()">☰</h1></div></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Events</a>
+                <li><div class="sidetop"><h1 id="click" onclick="sidebar()">X</h1></div></li>
+                <li onclick="sidebar()"><a href="#about">About</a></li>
+                <li onclick="sidebar()"> <a href="#events">Events</a>
                 <li><a href="#">Team</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+
             </div>
 
             <nav class="navbar">
@@ -24,8 +27,8 @@
                 <h1 id="click" onclick="sidebar()">☰</h1>
 
                 <div id="navi">
-                    <a href="#">About</a>
-                    <a href="#">Events</a>
+                    <a href="#about">About</a>
+                    <a href="#events">Events</a>
                     <a href="#">Team</a>
                     <a href="#">Contact</a>
                 </div>
@@ -49,16 +52,77 @@
         </div>
         
 
-        <div class="about1">
+        <div class="about1" id="about">
             <h1>About us</h1>
             <p>The Finverse Club at <strong>PSG Tech</strong> empowers students with financial literacy, bridging engineering expertise with <strong>financial intelligence</strong>. Through workshops, seminars, and hands-on activities like <strong>investing simulations</strong>, members gain essential skills for managing personal and professional finances. The club fosters a community of continuous learning, preparing future leaders for <strong>financial independence</strong> and informed decision-making.</p>
         </div>
         
+        <h1 class="headings">Events</h1>
         
+    <div class="container swiper" id="events">
+        <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+                
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="fintalk.png" alt="card image" class="card-image">
+                        <p class="badge">Fintalk - Megha Jose</p>
+                        <h2 class="card-title">An Event conducted by the Finverse club of psg Tech</h2>
+                        
+                    </a>
+                </li>
+
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="fintalk logo.png" alt="card image" class="card-image">
+                        <p class="badge">Fintalk.ep1</p>
+                        <h2 class="card-title">An Event conducted by the Finverse club of psg Tech</h2>
+                        
+                    </a>
+                </li>
+
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="designer.jpg" alt="card image" class="card-image">
+                        <p class="badge">Fintalk</p>
+                        <h2 class="card-title">An Event conducted by the Finverse club of psg Tech</h2>
+                       
+                    </a>
+                </li>
+
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="developer.jpg" alt="card image" class="card-image">
+                        <p class="badge">Fintalk</p>
+                        <h2 class="card-title">An Event conducted by the Finverse club of psg Tech</h2>
+                       
+                    </a>
+                </li>
+
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="marketer.jpg" alt="card image" class="card-image">
+                        <p class="badge">Fintalk</p>
+                        <h2 class="card-title">An Event conducted by the Finverse club of psg Tech</h2>
+                       
+                    </a>
+                </li>
+            </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
     </div>
     
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
-<script src="index.js"></script>
+
 <footer>
     <p><em>Finverse Club</em></p>
 </footer>

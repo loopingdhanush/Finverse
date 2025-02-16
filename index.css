@@ -12,6 +12,10 @@ body,html{
     width: 100%;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 #slide1{
     background-image: linear-gradient(to right top,black ,green 90%);
     padding: 10px;
@@ -22,7 +26,7 @@ body,html{
 }
 .sidebar{
     display: none;
-    user-select:none;
+    user-select: none;
 }
 
 .navbar{
@@ -39,12 +43,15 @@ body,html{
     background-color: rgb(255,255,255,0.1);
     backdrop-filter: blur(10px) ;
     box-shadow: 0px 0px 10px 2px rgb(0,0,0,0.2);   
-    position: sticky;
+    position: block;
     top: 10px;
     z-index: 1;
     -webkit-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+
+
 
 #click{
     display: none;
@@ -69,9 +76,10 @@ body,html{
 }
 
 .sidetop{
-    display: flex;
-    align-items: center;
-    justify-content: space-between
+font-size: medium;
+ display: flex;
+ justify-content: end;
+ margin-right: 25px;   
 }
 
 
@@ -136,12 +144,18 @@ margin-bottom: 10%;
     background-color: rgb(163, 228, 163);
     border-radius: 20px;
     margin: 20px; /* Centers the div */
-    max-width: 1000px;
+    max-width: 950px;
     text-align: center;
     transition: 0.5s;
     user-select: none;
 }
 
+.headings{
+    margin-top: 40px ;
+    margin-bottom:40px ;
+    color: lightgreen;
+    text-align: center;
+}
 .about1 strong,.about1 h1 {
     transition: color 0.5s ease-in-out;
 }
@@ -169,6 +183,72 @@ margin-bottom: 10%;
     font-size: large;
 }
 
+.card-list .card-item{
+    list-style: none;
+}
+
+
+.card-list .card-item .card-link{
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    transition: 0.2s ease-in;
+}
+.card-list .card-item .card-link:hover{
+    border-color: green;
+}
+
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px; 
+}
+
+.card-list .card-link .badge{
+    color: black;
+    margin: 16px 0 18px;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border:2px solid;
+    background-color: white;
+    width: fit-content;
+    border-radius: 50px;
+    transition: 0.3s ease-in;
+}
+
+.card-list .card-link:hover .badge{
+    background: rgb(177, 238, 177);
+}
+
+.card-list .card-link .card-title{
+    font-size: 1rem;
+    color: black;
+    font-weight: 600;
+}
+
+
+.card-wrapper{
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 0px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    margin-bottom: 40px;
+}
+
+
 footer{
     display: flex;
     height: 40px;
@@ -182,6 +262,8 @@ footer p{
     
     color: white;
 }
+
+
 
 
 
@@ -211,13 +293,14 @@ footer p{
     100%{
         transform: translateY(-400%);
 }
+
 }
 
 @media (max-width:600px){
     .navbar{
         border-radius: 7;
         top: 0;
-        margin: 15px 15px 0px 15px;
+        margin: 0px 15px 0px 15px;
     }
 
     .sidebar{
@@ -237,9 +320,6 @@ footer p{
         flex-direction: column;
     }
 
-    .sidebar{
-        display: none;
-    }
 
     #nav h1{
         display: block;
@@ -252,11 +332,7 @@ footer p{
     
     #click{
         display: block;
-    }
-
-    #slide1{
-        padding: 0px;
-        margin: 0px;
+        
     }
 
     #intro h1{

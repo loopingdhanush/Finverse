@@ -6,3 +6,5 @@ function sidebar(){
         x.style.display = "none";
     }
 }
+
+
